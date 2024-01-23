@@ -87,3 +87,26 @@ footer ul {
     display: inline-block;
     vertical-align: top;
 }
+
+@media only screen and (max-width:600) {
+    .flexContainer {
+        flex-direction:column;
+    }
+    .flexContainer > div {
+        width:100%;
+    }
+
+    .workGrid {
+        display: grid;
+        grid-template-areas:
+        "project1 img"
+        "project 1 info"
+        "project 2 img"
+        "project 2 info"
+        "view-all-projects";
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 100%;
+    }
+
+
+}
