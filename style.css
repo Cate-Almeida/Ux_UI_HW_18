@@ -8,12 +8,22 @@ body {
     justify-content: center;
 }
 
+header {
+
+    box-shadow: 0px 5px 16px #1c11209f;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+}
+
 header.navigation {
     background-color: #220928;
     color: rgb(244, 235, 235);
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .inline-block {
@@ -33,12 +43,30 @@ header.navigation {
 
 
 ul {
-    width: 50%;
+    margin-right: 20px;
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+li {
+    
+    border-bottom: solid 1px transparent;
+
+}
+
+li:hover {
+
+    cursor:pointer;
+    color:orange;
+    border-bottom: solid 1px;
+
+
 }
 
 #heroImg {
-    height: 600px;
     padding: 25px;
     display:flex;
     flex-direction: column;
@@ -49,11 +77,13 @@ ul {
 #heroImg .content {
     width: 50%;
     margin: auto;
+    margin-top: 10%;
     background-color:#f6ecf5;
     display: flex;
     flex-direction: column;
     padding: 20px;
     justify-content: center;
+    box-shadow: 3px 3px 10px #5b3b653b;
 }
 
 #profile-picture {
@@ -63,50 +93,167 @@ ul {
 
 }
 
-
-#heroImg .content button {
-    border: none;
-  color: rgb(26, 21, 29);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  background-color:#ba85c9
-    
+#logo {
+    height: 50px;
 }
 
 
+#heroImg .content button {
+    border: none;
+    color: rgb(248, 238, 253);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color:#ba85c9;
+    border-radius: 7px;
+}
+
+#heroImg button:hover {
+
+    cursor:pointer;
+
+    background-color:#df9ef1
+}
+
+.skill-card img{
+    height: auto;
+    width: 100%;
+}
+
+.skill-card .frame {
+    height: 320px;
+    overflow: hidden;
+}
+
+}
+
+#mySkills h1 {
+    text-align:center;
+} 
+
+#mySkills .flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.skill-card {
+    box-shadow: 2px 2px 6px #0004;
+    border-radius: 8px;
+    padding: 16px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skill-card h3,
+.skill-card p {
+    text-align: center;
+}
+
+#myWork {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#myWork h1 {
+    text-align:center;
+
+}
+
+
+
+#myWork .card-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.work-card {
+    box-shadow: 2px 2px 6px #0004;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.work-card img {
+    width: 45%;
+}
+
+.work-card div {
+    width: 55%;
+    padding: 20px;
+    padding-left: 10%;
+}
+
+.work-card h4 {
+    margin: 0px;
+}
+
+#ppp-button{
+    border: none;
+    background-color: transparent;
+    background-color:#ba85c9;
+    margin: 0px;
+    border-radius: 4px;
+    color:#f6ecf5;
+    font-size: 16px;
+}
+
+#ppp-button:hover {
+
+    cursor: pointer;
+    background-color:#df9ef1;
+}
+
+#nsa-button{
+    border: none;
+    background-color: transparent;
+    background-color:#ba85c9;
+    margin: 0px;
+    border-radius: 4px;
+    color:#f6ecf5;
+    font-size: 16px;
+}
+
+#nsa-button:hover {
+
+    cursor: pointer;
+    background-color:#df9ef1;
+}
+
+
+#view-all-projects {
+    border: none;
+    background-color: transparent;
+    background-color:#ba85c9;
+    color:#f6ecf5;
+    margin: 0px;
+    border-radius: 12px;
+    font-size:large;
+}
+
+#view-all-projects:hover {
+    cursor: pointer;
+    background-color:#df9ef1;
+}
+
 footer {
     background-color: #220928;
-    color: white;
+    color: rgba(255, 255, 255, 0.548);
     padding: 20px;
+    text-align: center;
+
+
 }
 
 footer ul {
     display: inline-block;
     vertical-align: top;
-}
-
-@media only screen and (max-width:600) {
-    .flexContainer {
-        flex-direction:column;
-    }
-    .flexContainer > div {
-        width:100%;
-    }
-
-    .workGrid {
-        display: grid;
-        grid-template-areas:
-        "project1 img"
-        "project 1 info"
-        "project 2 img"
-        "project 2 info"
-        "view-all-projects";
-        grid-template-rows: repeat(5, auto);
-        grid-template-columns: 100%;
-    }
-
-
 }
