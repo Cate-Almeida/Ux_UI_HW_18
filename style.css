@@ -196,6 +196,22 @@ gap: 10px;
     margin: 0px;
 }
 
+#elapse-button{
+    border: none;
+    background-color: transparent;
+    background-color:#ba85c9;
+    margin: 0px;
+    border-radius: 4px;
+    color:#f6ecf5;
+    font-size: 16px;
+}
+
+#elapse-button:hover {
+
+    cursor: pointer;
+    background-color:#df9ef1;
+}
+
 #ppp-button{
     border: none;
     background-color: transparent;
